@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CPMS   </title>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/textbox.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CPMSwebapp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar position-sticky navbar-expand-sm navbar-toggleable-sm navbar-dark navbar-bg border-bottom box-shadow mt-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-memory fa-2x">  CPMS  </i>  
+                    </a> 
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="navbar-collapse collapse id="navbarContent" d-sm-inline-flex justify-content-between">
+                    <!-- Pages -->
+                    <ul class="navbar-nav flex-grow-1 me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light " asp-area="" asp-controller="Authors" asp-action="Index">Authors</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-light " asp-area="" asp-controller="Reviewers" asp-action="Index">Reviewers</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-light " asp-area="" asp-controller="Papers" asp-action="Index">Papers Library</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-light " asp-area="" asp-controller="Reviews" asp-action="Index">Reviews Library</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav flex-row me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <i class="fa fa-globe fa-2x"></i>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="border-top mt-sm-5 footer text-muted">
+        <div class="container">
+            &copy; @DateTime.Now.Year - CPMS  - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+              -  <a asp-area="" asp-controller="Home" asp-action="Privacy">Login</a>
+              -  
+        </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    
+</body>
+</html>

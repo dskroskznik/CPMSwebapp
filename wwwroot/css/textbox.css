@@ -1,0 +1,39 @@
+﻿body {
+}
+
+.th, .td {
+    text-align: left;
+    font-size: 11px;
+}
+
+.tr:nth-child(even) {
+    background-color: lightblue;
+}
+
+@media (min-width:1400px) {
+    .authorcrt2 {
+        width: 400%
+    }
+}
+
+@media (min-width:1400px) {
+    .authorcrt {
+        width:200%
+    }
+}
+.authorcrt c {
+    float: initial;
+    width: 99%;
+
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px
+}
+
+.wrapper2 {
+    display: grid;
+    grid-template-columns: 15fr 5fr;
+    grid-gap: 5px
+}

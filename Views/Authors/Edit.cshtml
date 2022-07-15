@@ -1,0 +1,108 @@
+﻿@model CPMSwebapp.Models.Author
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Author Profile</h1>
+<hr />
+
+<div class="row-border">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+           <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="wrapper authorcrt" href="textbox.css">
+                <c>
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span> 
+                </c>
+                <div class="wrapper authorcrt" href="textbox.css">
+                    <c>
+                            <label asp-for="MiddleInitial" class="control-label"></label>
+                            <input asp-for="MiddleInitial" class="form-control" />
+                            <span asp-validation-for="MiddleInitial" class="text-danger"></span> 
+                    </c>
+                        <div class="wrapper authorcrt" href="textbox.css">
+                            <c>
+                                <label asp-for="LastName" class="control-label"></label>
+                                <input asp-for="LastName" class="form-control" />
+                                <span asp-validation-for="LastName" class="text-danger"></span> 
+                            </c>
+                        </div>
+                    </div>
+            <div class="wrapper2 authorcrt" href="textbox.css">
+                <c>
+                    <label asp-for="Affiliation" class="control-label"></label>
+                    <input asp-for="Affiliation" class="form-control" />
+                    <span asp-validation-for="Affiliation" class="text-danger"></span> 
+                </c>
+                    <div class="wrapper2 authorcrt2" href="textbox.css">
+                        <c>
+                            <label asp-for="Department" class="control-label"></label>
+                            <input asp-for="Department" class="form-control" />
+                             <span asp-validation-for="Department" class="text-danger"></span> 
+                        </c>
+                    </div>
+            </div>
+            </div>
+            <div class="wrapper authorcrt" href="textbox.css">
+                <c>
+                    <label asp-for="Address" class="control-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span> 
+                </c>
+                    <div class="wrapper authorcrt" href="textbox.css">
+                        <c>
+                            <label asp-for="City" class="control-label"></label>
+                            <input asp-for="City" class="form-control" />
+                            <span asp-validation-for="City" class="text-danger"></span> 
+                        </c>
+                            <div class="wrapper authorcrt" href="textbox.css">
+                                <c>
+                                    <label asp-for="State" class="control-label"></label>
+                                    <input asp-for="State" class="form-control" />
+                                    <span asp-validation-for="State" class="text-danger"></span> 
+                                </c>
+                            </div>
+                     </div>
+                </div>
+            <div class="wrapper2 authorcrt" href="textbox.css">
+                <c>
+                    <label asp-for="ZipCode" class="control-label"></label>
+                    <input asp-for="ZipCode" class="form-control" />
+                    <span asp-validation-for="ZipCode" class="text-danger"></span> 
+                </c>
+                    <div class="wrapper2 authorcrt2" href="textbox.css">
+                        <c>
+                            <label asp-for="PhoneNumber" class="control-label"></label>
+                            <input asp-for="PhoneNumber" class="form-control" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span> 
+                        </c>
+                    </div>         
+                </div>
+            <div class="wrapper2 authorcrt" href="textbox.css">
+                <c>
+                    <label asp-for="EmailAddress" class="control-label"></label>
+                    <input asp-for="EmailAddress" class="form-control" />
+                    <span asp-validation-for="EmailAddress" class="text-danger"></span> 
+                </c>
+                    <div class="wrapper2 authorcrt2" href="textbox.css">
+                        <c>
+                            <label asp-for="Password" class="control-label"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span> 
+                        </c>
+                    </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index">Go Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

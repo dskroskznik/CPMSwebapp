@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-2">Welcome</h1>
+    <h2 class="display-5">If you would like to view reviewed papers, or submit your own, navigate to the top right to register or login.</h2>
+    <h5 class="display-6"> Search the navigation bar, or click an option below to view entered Authors, Reviewers, Papers & Reviews.</h5>
+    <b>
+
+    </b>
+    <div class="btn-group" style="display:flex; flex-direction:row; align-items: start">
+                <a asp-controller="Authors" asp-action="Index" class="btn btn-outline-light btn-sm btn-info"> Authors</a> 
+                <a asp-controller="Reviewers" asp-action="Index" class="btn btn-outline-light btn-sm btn-info"> Reviewers</a>
+                <a asp-controller="Papers" asp-action="Index" class="btn btn-outline-light btn-sm btn-info"> Papers Library</a>
+                <a asp-controller="Reviews" asp-action="Index" class="btn btn-outline-light btn-sm btn-info"> Reviews Library</a>
+     </div>
+</div>

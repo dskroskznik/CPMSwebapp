@@ -1,0 +1,19 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 789px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+html {
+    position: center;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 20px;
+    background-color: lightgray;
+}

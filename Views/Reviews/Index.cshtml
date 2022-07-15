@@ -1,0 +1,91 @@
+﻿@model IEnumerable<CPMSwebapp.Models.Review>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Reviews</h1>
+<hr />
+<h6>Click 'Edit' to edit review details</h6>
+<h6>Click 'Details' to view review details</h6>
+<h6>Click 'Delete' to delete review entry</h6>
+<hr />
+
+<p>
+   <a asp-action="Create" class=" btn btn-sm btn-primary m1-1">Post A Review</a>
+</p>
+<table class="table table-sm table-condensed table-responsive-sm table-bordered" href="textbox.css">
+    <thead>
+        <tr>
+           <th>
+                @Html.DisplayNameFor(model => model.Paper)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reviewer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CitationOfPreviousWork)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrganizationOfPaper)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClarityOfMainMessage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WrittenDocumentComments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OverallRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OverallRatingComments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Complete)
+            </th>
+             <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+           <td>
+                @Html.DisplayFor(modelItem => item.Paper)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reviewer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CitationOfPreviousWork)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrganizationOfPaper)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClarityOfMainMessage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WrittenDocumentComments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OverallRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OverallRatingComments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Complete)
+            </td>
+ 
+            <td>
+                <div class="btn-group">
+                <a asp-action="Edit" asp-route-id="@item.ReviewId" class="btn btn-sm btn-info">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.ReviewId" class="btn btn-sm btn-info">Details</a> 
+                <a asp-action="Delete" asp-route-id="@item.ReviewId" class="btn btn-sm btn-danger" >Delete</a>
+                </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
